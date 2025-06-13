@@ -3,13 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
+    path: '',
+    loadChildren: () =>
+      import('./pages/public/public.module').then((m) => m.PublicModule),
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then((m) => m.LoginModule),
+    path: 'app',
+    loadChildren: () =>
+      import('./pages/private/private.module').then((m) => m.PrivateModule),
+    // canActivate: [AuthGuard],
   },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

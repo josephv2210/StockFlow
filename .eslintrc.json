@@ -8,8 +8,12 @@
         "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": ["plugin:@angular-eslint/recommended"],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:prettier/recommended"
+      ],
       "rules": {
+        "prettier/prettier": "error",
         "@angular-eslint/prefer-standalone": "off"
       }
     },

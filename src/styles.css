@@ -1,1 +1,51 @@
 @import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* Font */
+  --font-display: 'Poppins', sans-serif;
+
+  /* Colors */
+
+  --color-primary-50: #e6eef4;
+  --color-primary-100: #c3d9e8;
+  --color-primary-200: #9fc3db;
+  --color-primary-300: #7cadce;
+  --color-primary-400: #5897c2;
+  --color-primary: #0d406d;
+  --color-primary-600: #0a3458;
+  --color-primary-700: #082842;
+  --color-primary-800: #051c2d;
+  --color-primary-900: #031018;
+  --color-primary-950: #01080d;
+
+  --color-sky-50: #e6f4fc;
+  --color-sky-100: #c2e3f8;
+  --color-sky-200: #9fd2f4;
+  --color-sky-300: #7bc0f0;
+  --color-sky-400: #57afec;
+  --color-sky: #2397d6;
+  --color-sky-600: #1c78ab;
+  --color-sky-700: #155a80;
+  --color-sky-800: #0e3b55;
+  --color-sky-900: #071d2a;
+  --color-sky-950: #03101a;
+
+  --color-light-gray: #eceef2;
+  --color-blue-gray: #627589;
+
+  /* DropShadow */
+  --drop-shadow-border: 0 0 17px rgba(0, 0, 0, 0.15);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+  }
+
+  :root {
+    --color-primary: var(--color-primary-500);
+    --color-sky: var(--color-sky-500);
+  }
+}

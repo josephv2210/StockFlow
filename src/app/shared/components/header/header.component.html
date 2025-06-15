@@ -1,1 +1,3 @@
-<p>header works!</p>
+<div [ngClass]="cn('w-full bg-white flex p-2 drop-shadow-border h-1/20', isAuth ? 'justify-between' : 'justify-center')">
+  <img [src]="ASSETS.LOGO" alt="Logo" class="h-auto">
+</div>

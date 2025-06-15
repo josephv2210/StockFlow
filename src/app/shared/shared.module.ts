@@ -4,6 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { LucideAngularModule, Heart, Dot, Github } from 'lucide-angular';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    LucideAngularModule.pick({ Heart, Dot, Github }),
   ],
   exports: [
     SidebarComponent,

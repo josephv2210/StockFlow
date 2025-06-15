@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 @theme {
   /* Font */
@@ -34,6 +34,7 @@
 
   --color-light-gray: #eceef2;
   --color-blue-gray: #627589;
+  --color-gray: #999999;
 
   /* DropShadow */
   --drop-shadow-border: 0 0 17px rgba(0, 0, 0, 0.15);

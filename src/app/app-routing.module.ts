@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'app',
     loadChildren: () =>
       import('./pages/private/private.module').then((m) => m.PrivateModule),
-    // canActivate: [AuthGuard],
+    // canActivate: [AuthGuard], TODO
   },
   { path: '**', redirectTo: '' },
 ];

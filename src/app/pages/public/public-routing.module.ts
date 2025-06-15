@@ -1,11 +1,18 @@
-import { NgModule } from '@angular/core';
+import { PublicLayoutComponent } from '../../layouts/public-layout/public-layout.component';
+import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    component: PublicLayoutComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: '', component: HomeComponent },
+    ],
+  },
 ];
 
 @NgModule({

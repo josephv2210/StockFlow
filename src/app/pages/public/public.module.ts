@@ -1,19 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { PublicLayoutComponent } from '../../layouts/public-layout/public-layout.component';
 import { PublicRoutingModule } from './public-routing.module';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-
+import { SharedModule } from '../../shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    LoginComponent
+    PublicLayoutComponent
   ],
   imports: [
+    PublicRoutingModule,
     CommonModule,
-    PublicRoutingModule
-  ]
+    RouterModule,
+    SharedModule
+  ],
+  exports: [
+    PublicLayoutComponent
+  ],
 })
 export class PublicModule { }

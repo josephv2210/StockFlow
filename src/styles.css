@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
-
 @theme {
   /* Font */
   --font-display: 'Poppins', sans-serif;
@@ -14,6 +13,7 @@
   --color-primary-300: #7cadce;
   --color-primary-400: #5897c2;
   --color-primary: #0d406d;
+  --color-primary-500: #0d406d;
   --color-primary-600: #0a3458;
   --color-primary-700: #082842;
   --color-primary-800: #051c2d;
@@ -26,6 +26,7 @@
   --color-sky-300: #7bc0f0;
   --color-sky-400: #57afec;
   --color-sky: #2397d6;
+  --color-sky-500: #2397d6;
   --color-sky-600: #1c78ab;
   --color-sky-700: #155a80;
   --color-sky-800: #0e3b55;
@@ -46,7 +47,81 @@
   }
 
   :root {
-    --color-primary: var(--color-primary-500);
-    --color-sky: var(--color-sky-500);
+    --color-primary: var(--color-primary);
+    --color-sky: var(--color-sky);
+  }
+
+  p-button {
+    background-color: var(--color-primary-500);
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    box-shadow: var(--drop-shadow-border);
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    min-width: 100px;
+    box-sizing: border-box;
+    &:hover {
+      background-color: var(--color-primary-700);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+      background-color: var(--color-primary-700);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    &:disabled {
+      background-color: var(--color-gray);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    &.primary {
+      background-color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-primary-600);
+      }
+      &:active {
+        background-color: var(--color-primary-700);
+      }
+    }
+    &.secondary {
+      background-color: var(--color-sky);
+      &:hover {
+        background-color: var(--color-sky-600);
+      }
+      &:active {
+        background-color: var(--color-sky-700);
+      }
+    }
+    &.outline {
+      background-color: transparent;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-primary-50);
+        box-shadow: var(--drop-shadow-border);
+      }
+      &:active {
+        background-color: var(--color-primary-100);
+      }
+    }
+    &.disabled {
+      background-color: var(--color-gray);
+      color: #ffffff;
+      cursor: not-allowed;
+      box-shadow: none;
+      &:hover,
+      &:active {
+        background-color: var(--color-gray);
+      }
+    }
   }
 }

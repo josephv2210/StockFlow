@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { LucideAngularModule, Heart, Dot, Github } from 'lucide-angular';
+import { ToastComponent } from './components/toast/toast.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { LucideAngularModule, Heart, Dot, Github } from 'lucide-angular';
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
+    ToastComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { LucideAngularModule, Heart, Dot, Github } from 'lucide-angular';
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
+    ToastComponent,
   ],
 })
 export class SharedModule { }

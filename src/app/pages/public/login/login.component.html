@@ -7,14 +7,15 @@
     <div class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-md">
       <h2 class="text-2xl font-bold text-primary mb-6">Sign In</h2>
 
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="mb-4">
           <label for="email" class="block text-sm font-semibold mb-1">Email</label>
           <input
             type="email"
             id="email"
+            formControlName="email"
             placeholder="you@example.com"
-            class="w-full px-4 py-2 rounded bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-4 py-2 rounded bg-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 
@@ -23,8 +24,9 @@
           <input
             type="password"
             id="password"
+            formControlName="password"
             placeholder="********"
-            class="w-full px-4 py-2 rounded bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-4 py-2 rounded bg-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 

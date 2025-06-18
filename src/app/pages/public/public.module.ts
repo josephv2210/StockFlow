@@ -3,6 +3,7 @@ import { PublicRoutingModule } from './public-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
@@ -16,10 +17,11 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     PublicRoutingModule,
+    ReactiveFormsModule,
     CommonModule,
     RouterModule,
     SharedModule,
-    ButtonModule
+    ButtonModule,
   ],
   exports: [
     PublicLayoutComponent

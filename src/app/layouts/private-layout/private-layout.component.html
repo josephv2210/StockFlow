@@ -1,9 +1,12 @@
 <div class="h-dvh bg-light-gray">
   <app-header></app-header>
 
-  <main class="p-4 h-18/20">
-    <router-outlet></router-outlet>
-  </main>
+  <div class="h-18/20 flex items-center">
+    <app-navbar class="w-20 h-full"></app-navbar>
+    <main class="mx-20 w-full h-18/20 bg-amber-100">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 
   <app-toast></app-toast>
 

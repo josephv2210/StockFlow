@@ -125,3 +125,24 @@
     }
   }
 }
+
+.p-dock-list {
+  gap: 1rem !important;
+  display: flex;
+  background-color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem !important;
+}
+
+.p-tooltip {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-left: 1rem;
+  gap: 1rem;
+  filter: drop-shadow(0 0 17px rgba(0, 0, 0, 0.15)) !important;
+
+}
+
+.p-tooltip-arrow {
+  display: none !important;
+}

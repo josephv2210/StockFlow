@@ -1,0 +1,13 @@
+<div class="h-full w-full">
+    <p-dock [model]="dockItems" position="left" class="w-full h-full">
+        <ng-template #item let-item class=" bg-blue-300">
+            <img
+                [pTooltip]="item.label"
+                tooltipPosition="right"
+                [src]="item.icon"
+                [alt]="item.label"
+                class="w-12 h-12 cursor-pointer"
+            />
+        </ng-template>
+    </p-dock>
+</div>

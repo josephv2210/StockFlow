@@ -1,3 +1,18 @@
-<div [ngClass]="cn('w-full bg-white flex p-2 drop-shadow-border h-1/20', isAuth ? 'justify-between' : 'justify-center')">
-  <img [src]="ASSETS.LOGO" alt="Logo" class="h-auto">
+<div class="w-full grid grid-cols-3 items-center p-2 bg-white drop-shadow-border h-1/20">
+  <div></div>
+
+  <div [ngClass]="cn(isAuth ? 'flex items-end justify-center' : 'w-full flex justify-center')">
+    <img [src]="ASSETS.LOGO" alt="Logo" class="h-10 max-w-[150px]" />
+  </div>
+
+  <div *ngIf="isAuth" class="flex justify-end pr-4">
+    <p-avatar
+      label="J"
+      shape="circle"
+      styleClass="mr-2 !w-[40px] !h-[40px]"
+      size="large"
+      (click)="logout()"
+      [style]="{ 'background-color': '#ece9fc', color: '#2a1261', cursor: 'pointer' }"
+    />
+  </div>
 </div>

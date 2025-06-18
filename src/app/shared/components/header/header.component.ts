@@ -1,6 +1,8 @@
 import { ASSETS } from '../../../config/constants';
 import { cn } from '../../utils/classnames';
 import { Component } from '@angular/core';
+import { AuthService } from '../../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,4 +15,15 @@ export class HeaderComponent {
 
   public ASSETS = ASSETS;
   public cn = cn;
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit(){
+    this.isAuth = this.authService.isAuthenticaded();
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }
